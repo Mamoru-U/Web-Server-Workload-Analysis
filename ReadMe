@@ -1,0 +1,16 @@
+The server log is in the fixed text-based Common Log Format and has the following syntax:
+hostname - - [dd/mm/yyyy:hh:mm:ss time_zone] object response_code transfer_size
+
+The hostname is the resolved name or IP address of the client making a request for an object stored on
+the Web server. The following fields (- -) are usually empty, but may contain user-identifier information
+such as username. The next field indicates the day and time the request was made along with the time zone.
+The URL requested is noted in the object field. The response_code field indicates the HTTP response
+code returned by the server. The transfer_size field records the bytes transferred by the server.
+
+For example, the following is a line from the access log:
+imhotep.usask.ca - - [15/Sep/1995:16:02:09 -0600] "GET /changes.html HTTP/1.0" 200 1254
+
+This line represents a request made by host imhotep.usask.ca on September 15, 1995 at 4:02:09 p.m.
+The time zone is central time (GMT-0600). The host requested the HTML file called changes.html using
+HTTP version 1.0. This request was successfully completed by the server as shown by the status code 200.
+The server transferred 1254 bytes to the host imhotep.usask.ca.
