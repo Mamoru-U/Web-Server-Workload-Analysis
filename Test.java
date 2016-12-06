@@ -5,7 +5,7 @@ import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.util.*;
 
-public class Ass3{
+public class Test{
      
      public static void main(String[] args){
           try{
